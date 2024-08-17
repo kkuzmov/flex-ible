@@ -2,9 +2,17 @@
   --color-primary: #f7eeee;
   --color-sec: #f7cac9;
   --color-third: #91a8d0;
+  --color-fourth: #607291;
 
   --text-color: #14452f;
+  --bg-color: #adbdd8;
+  --bg-color-2: #09271a;
+  --white: #fff;
+  --black: #000;
+
   --gradient-primary: linear-gradient(179.1deg, var(--color-primary) -1.9%, var(--color-sec) 44.9%, var(--color-third) 96.1%);
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 }
 
 * {
