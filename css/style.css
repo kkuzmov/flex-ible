@@ -6,6 +6,9 @@
   --text-color: #14452f;
   --bg-color: #adbdd8;
   --bg-color-2: #09271a;
+  --bg-color-3: #e6e6e6;
+  --bg-color-4: #c6c6c6;
+  --bg-color-5: #535353;
   --white: #fff;
   --black: #000;
   --gradient-primary: linear-gradient(179.1deg, var(--color-primary) -1.9%, var(--color-sec) 44.9%, var(--color-third) 96.1%);
@@ -41,11 +44,6 @@ body {
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
 
-.header {
-  height: 7rem;
-  background-color: var(--white);
-  border-bottom: 2px solid var(--color-fourth); }
-
 .content {
   display: flex; }
 
@@ -56,3 +54,58 @@ body {
 
 .hotel-view {
   flex: 1; }
+
+.header {
+  display: flex;
+  height: 7rem;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--color-fourth);
+  justify-content: space-between;
+  align-items: center; }
+  .header__logo {
+    height: 3.25rem;
+    margin-left: 5rem; }
+  .header__search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header__search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--bg-color-3);
+    border: none;
+    color: inherit;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 95%;
+    transition: all .2s;
+    margin-right: -3.5rem; }
+    .header__search-input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--bg-color-4); }
+    .header__search-input::placeholder {
+      color: var(--bg-color-5);
+      font-size: 1.1rem;
+      font-weight: 100; }
+  .header__search-input:focus + .header__search-btn {
+    background-color: var(--bg-color-4); }
+  .header__search-btn {
+    border: none;
+    background-color: var(--bg-color-3);
+    transition: all .2s; }
+    .header__search-btn:focus {
+      outline: none; }
+    .header__search-btn:active {
+      transform: translateY(3px); }
+  .header__search-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--bg-color-5); }
+  .header__nav-icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .header__nav-user-photo {
+    width: 3.5rem;
+    border-radius: 50%; }

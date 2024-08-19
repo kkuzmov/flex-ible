@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  height: 7rem;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--color-fourth);
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 3.25rem;
+    margin-left: 5rem;
+  }
+
+  &__search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--bg-color-3);
+    border: none;
+    color: inherit;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 95%;
+    transition: all .2s;
+    margin-right: -3.5rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--bg-color-4);
+    }
+
+    &::placeholder {
+      color: var(--bg-color-5);
+      font-size: 1.1rem;
+      font-weight: 100;
+    }
+  }
+
+  &__search-input:focus + &__search-btn {
+    background-color: var(--bg-color-4);
+  }
+
+  &__search-btn {
+    border: none;
+    background-color: var(--bg-color-3);
+    transition: all .2s;
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+
+  &__search-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--bg-color-5);
+  }
+
+  &__nav {}
+
+  &__nav-icon-box {}
+
+  &__nav-icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  &__notification {}
+
+  &__nav-user {}
+
+  &__nav-user-photo {
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+
+  &__nav-username {}
+}
