@@ -81,29 +81,82 @@
 
 .overview {
   display: flex;
-  &__heading {
+  border-bottom: 1px solid var(--color-fourth);
+  align-items: center;
 
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
     margin-right: auto;
+    display: flex;
+
   }
+
+  &__stars:hover &__icon {
+    animation: pulsate 1s infinite;
+    border-radius: 100px;
+  }
+
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
-    fill: var(--color-primary);
+    fill: var(--text-color);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-left: .5rem;
   }
 
   &__rating {
-
+    background-color: var(--color-third);
+    color: var(--white);
+    margin-left: 3rem;
+    padding: 0.5rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__rating-average {
-    
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -5px;
   }
 
   &__rating-count {
-    
+    font-size: .9rem;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
   }
 }
