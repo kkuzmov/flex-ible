@@ -182,6 +182,43 @@ body {
     flex: 1;
     background-color: greenyellow;
     padding: 2.5em; }
+  .detail__paragraph:not(:last-of-type) {
+    margin-bottom: 2rem; }
+  .detail__paragraph--rec {
+    margin-right: auto; }
+  .detail__list {
+    list-style-type: none;
+    margin: 3rem 0;
+    padding: 3rem;
+    border-top: 1px solid var(--color-fourth);
+    border-bottom: 1px solid var(--color-fourth);
+    display: flex;
+    flex-wrap: wrap; }
+  .detail__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+    .detail__item::before {
+      content: '';
+      display: inline-block;
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-right: .7rem;
+      background-color: var(--color-fourth);
+      mask-image: url(../img/chevron-right.svg);
+      mask-size: cover; }
+  .detail__recommend {
+    font-size: 1.3rem;
+    color: var(--color-fourth);
+    display: flex;
+    align-items: center; }
+  .detail__small-photo {
+    box-sizing: content-box;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: 3px solid var(--white); }
+    .detail__small-photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .header {
   display: flex;
