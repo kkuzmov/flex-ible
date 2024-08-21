@@ -100,7 +100,7 @@
     border-radius: 50%;
     border: 3px solid var(--white);
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
 
     }
   }
@@ -217,6 +217,48 @@
 
     &:focus {
       outline: none;
+    }
+  }
+}
+
+@media only screen and(max-width: $desktop-small) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and(max-width: $tablet) {
+  .content {
+    flex-direction: column;
+  }
+
+  .detail {
+    padding: 2rem;
+
+    &__description, &__review {
+      padding: 1.5rem;
+    }
+
+    &__description {
+      margin-right: 2rem;
+    }
+
+    &__review {
+      margin-bottom: 2rem;
+    }
+
+    &__cta {
+      padding: 2.5rem;
+    }
+
+    &__book-now {
+      margin-bottom: 2.5rem;
+    }
+
+    &__rec-pictures {
+      display: flex;
     }
   }
 }

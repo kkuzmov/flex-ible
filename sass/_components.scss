@@ -15,7 +15,7 @@
     &:not(:last-child) {
       margin-bottom: .5rem;
     }
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -29,7 +29,8 @@
 
     }
 
-    &:hover, &--active {
+    &:hover,
+    &--active {
       &::before {
         transform: scaleY(1);
         width: 100%;
@@ -43,7 +44,8 @@
     }
   }
 
-  &__link:link, &__link:visited {
+  &__link:link,
+  &__link:visited {
     color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
@@ -158,5 +160,32 @@
   100% {
     transform: scale(1);
     box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .sidebar {
+    &__ul {
+      display: flex;
+      margin: 0;
+    }
+
+    &__item {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: .5rem;
+      }
+    }
+
+    &__link {
+      justify-content: center;
+      padding: 2rem;
+    }
+  }
+
+  .legal {
+    display: none;
   }
 }
