@@ -265,8 +265,40 @@ body {
   .detail__book-now {
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 3.5rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 3.5rem; }
+  .detail__cta-btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: 1px solid var(--color-third);
+    background-image: linear-gradient(to right, var(--color-third), var(--color-sec));
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+    cursor: pointer; }
+    .detail__cta-btn > * {
+      display: inline-block;
+      transition: all .3s;
+      height: 100%;
+      width: 100%; }
+    .detail__cta-btn--visible {
+      padding: 2rem 7.5rem; }
+    .detail__cta-btn--hidden {
+      position: absolute;
+      left: 0;
+      top: -100%;
+      padding: 2rem 0; }
+    .detail__cta-btn:hover {
+      background-image: linear-gradient(to left, var(--color-third), var(--color-sec)); }
+    .detail__cta-btn:hover .detail__cta-btn--visible {
+      transform: translateY(100%); }
+    .detail__cta-btn:hover .detail__cta-btn--hidden {
+      top: 0; }
+    .detail__cta-btn:focus {
+      outline: none; }
 
 .header {
   display: flex;
