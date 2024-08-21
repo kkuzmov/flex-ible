@@ -9,12 +9,26 @@
     background-color: transparent;
     cursor: pointer;
     transition: all .2s;
+
+    & > span {
+      margin-left: .2rem;
+      transition: margin-left .2s;
+    }
     
-    
+    &:hover {
+      color: var(--bg-color-5);
+      transform: scale(1.03);
+
+      & > span {
+        margin-left: .8rem;
+      }
+    }
 
     &:focus {
       outline: none;
     }
   }
+
+  
 }
 
